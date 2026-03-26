@@ -1,9 +1,8 @@
-name: Generate pacman animation
+name: Generate datas
 
 on:
   schedule: # execute every 12 hours
     - cron: "* */12 * * *"
-
   workflow_dispatch:
 
   push:
@@ -21,7 +20,7 @@ jobs:
       - name: generate pacman-contribution-graph.svg
         uses: abozanona/pacman-contribution-graph@main
         with:
-           github_user_name:: Ivan-progr
+           github_user_name: Ivan-progr
 
 
       - name: push pacman-contribution-graph.svg to the output branch
